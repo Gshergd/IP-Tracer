@@ -1,0 +1,25 @@
+/* Restore the original open-corner waypoint silhouette. */
+.mapWaypoint{width:45px;height:45px;border:0;border-radius:0;background:none;transform:translate(-50%,-50%);color:#d3dce1}
+.mapWaypoint span{position:absolute;background:none;padding:0;color:inherit}
+.mapWaypoint .waypointCorners{inset:0;background:linear-gradient(currentColor,currentColor) left top/12px 1px,linear-gradient(currentColor,currentColor) left top/1px 12px,linear-gradient(currentColor,currentColor) right top/12px 1px,linear-gradient(currentColor,currentColor) right top/1px 12px,linear-gradient(currentColor,currentColor) left bottom/12px 1px,linear-gradient(currentColor,currentColor) left bottom/1px 12px,linear-gradient(currentColor,currentColor) right bottom/12px 1px,linear-gradient(currentColor,currentColor) right bottom/1px 12px;background-repeat:no-repeat}
+.mapWaypoint .waypointCross{left:50%;top:50%;transform:translate(-50%,-50%);font-size:18px;line-height:1}
+.mapWaypoint .waypointLabel{left:53px;top:-6px;background:#c1c9ce;color:#071017;padding:2px 7px;font-size:11px;white-space:nowrap}
+#loadingIntro{position:absolute;inset:0;z-index:5;background:#020304;opacity:1;transition:opacity .65s ease;overflow:hidden}
+#loadingIntro.leaving{opacity:0;pointer-events:none}
+.booting #reticle,.booting .zoom,.booting #mapGrid,.booting .mapAttribution,.booting #mapError,.booting #mission{visibility:hidden}
+.booting header,.booting footer{z-index:6;pointer-events:none}.booting .badge{opacity:0}
+.introTopology{position:absolute;inset:16% 0 0;opacity:.4;background:repeating-linear-gradient(43deg,transparent 0 6px,#8b9ca91a 6px 7px),repeating-linear-gradient(0deg,transparent 0 49px,#83919c1c 49px 50px),repeating-linear-gradient(90deg,transparent 0 139px,#83919c12 139px 140px);mask-image:linear-gradient(90deg,#000,transparent 70%)}
+.introTopology:after{content:'';position:absolute;inset:2% 20% 10% -10%;background:repeating-radial-gradient(ellipse at 25% 60%,transparent 0 42px,#73899926 43px 44px,transparent 45px 63px);transform:rotate(-12deg);opacity:.5}
+.introStage{position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);width:min(39vw,440px);aspect-ratio:1;perspective:1000px}
+.introMedallion{position:absolute;inset:0;transform-style:preserve-3d;animation:briefingTurn 3.8s cubic-bezier(.35,.06,.55,1) forwards}
+.coinFace,.coinDepth{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;user-select:none;pointer-events:none}
+.coinFace{backface-visibility:hidden;filter:brightness(.6) saturate(.7)}.coinFace.front{transform:translateZ(8px)}.coinFace.back{transform:rotateY(180deg) translateZ(8px)}
+.coinDepth{transform:translateZ(var(--depth));filter:brightness(.16) saturate(.3)}
+@keyframes briefingTurn{0%{transform:rotateX(-5deg) rotateY(-32deg)}12%{transform:rotateX(-5deg) rotateY(0deg)}76%{transform:rotateX(-5deg) rotateY(685deg)}100%{transform:rotateX(0deg) rotateY(720deg)}}
+.introReadout{position:absolute;top:73%;left:50%;transform:translateX(-50%);width:min(350px,75vw);text-align:left}.introReadout>span{font-size:9px;letter-spacing:.11em;color:#536774}.introReadout p{font-size:11px;color:#a2acb5;letter-spacing:.07em;margin:10px 0}.introReadout small{font-size:8px;color:#52626c;letter-spacing:.12em}.introProgress{height:3px;background:#1e252a;margin:12px 0}.introProgress div{width:0;height:100%;background:#3a6179;transition:width .5s linear}
+#skipIntro{position:absolute;bottom:18%;right:14.5%;background:transparent;border:0;color:#7e8b95;font-size:9px;letter-spacing:.08em;padding:10px;z-index:9}#skipIntro:hover,#skipIntro:focus-visible{color:#d5e0e7;background:#18232a}
+@media(max-width:700px){.introStage{width:min(72vw,340px);top:44%}.introReadout{top:65%}.introReadout p{font-size:9px}#skipIntro{bottom:27%;right:5%;font-size:8px}}
+@media(prefers-reduced-motion:reduce){.introMedallion{animation:none;transform:none}#loadingIntro{transition:none}}
+
+
+

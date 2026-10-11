@@ -1,0 +1,83 @@
+/* Composition measured against the user's 1920px briefing references. */
+body{font-family:'Bahnschrift','Arial Narrow','Lucida Console',sans-serif;letter-spacing:.025em}
+header{left:16.6vw;right:1vw;top:8.8vh;height:7.2vh;min-height:66px;background:transparent;border:0;padding:0}
+header:before{content:'';position:absolute;pointer-events:none;left:-16.6vw;top:-8.8vh;width:100vw;height:21vh;background:linear-gradient(#000b 0%,#0009 70%,transparent);z-index:-1}
+header:after{content:'';position:absolute;left:-15.6vw;bottom:0;width:14.8vw;height:20px;background:#55595c75;pointer-events:none}
+.badge{left:0;top:-.1vh;width:4.7vw;height:4.7vw;min-width:66px;min-height:66px;background-image:url('assets/tf141-medallion.png');filter:brightness(.75);box-shadow:0 0 0 4px #02040680}
+.identity{left:5.4vw;top:.6vh}.identity h1{font-size:clamp(18px,1.25vw,25px);font-weight:400;letter-spacing:.045em}.identity p{font-size:clamp(10px,.78vw,15px);line-height:1;letter-spacing:.07em;margin-top:2px}
+.network{display:block;left:30.7vw;bottom:25px;font-size:11px;font-family:'Bahnschrift','Arial Narrow',monospace}.calibration{right:20.3vw;top:0;font-size:9px;line-height:1.06;color:#a0a0a0}.filters{right:8.8vw;top:0;width:107px;font-size:9px;color:#8b8b8b}.filters span{background:#3636369c}
+nav{left:5.4vw;right:0;bottom:0;height:20px;border:0;background:#48494ac9}nav button{color:#080b0e;background:transparent;font-size:12px;font-weight:600;padding:0 5px;border-left:2px solid #173b50;letter-spacing:0}nav small{display:none}nav #config,nav #view{flex:0 0 16%}nav #tools{flex:0 0 24%}nav .code{font-size:10px;background:#040608;color:#8d969b;padding:0 8px}nav #sound{flex:1;color:#9a9fa2;font-size:9px;text-align:right;padding-right:12px}nav #fullscreen{flex:0 0 28px;color:#9a9fa2}
+footer{left:13.7vw;right:14.5vw;bottom:3.5vh;height:10.5vh;min-height:106px;background:#02040788;border-top:1px solid #5356598a;border-bottom:9px solid #3436399c}footer section{border-left:1px solid #6a6b6d66;padding:8px 10px}.group{left:10px;font-size:9px}.feeds{width:29%}.geo{width:22%}footer h2{font-size:18px;font-weight:400;letter-spacing:.055em;margin-top:13px}#feedRows{font-family:'Bahnschrift','Arial Narrow',monospace;font-size:11px;line-height:1.1;margin-left:63px}.status p,#clock{font-family:'Bahnschrift','Arial Narrow',monospace}.world{right:12px;width:110px;top:23px;fill:#14415e;stroke:none}.geo p{font-size:9px;color:#899ba8}.hint{font-size:8px}.fan{left:13.7vw;bottom:1%;font-size:6px}.mapAttribution{bottom:1%;right:1%;font-size:6px}
+#locate{left:10px;bottom:5px;padding:2px 8px;font-size:9px;background:#14273588}.panel{left:22vw;top:17.5vh}.edge{display:block}.scanlines{opacity:.045;background:repeating-linear-gradient(0deg,#000 0 1px,transparent 1px 4px)}
+#mapTiles{filter:brightness(.49) saturate(.36) contrast(1.1)}.vignette{background:radial-gradient(ellipse at 50% 48%,transparent 38%,#0005 100%)}
+#mapGrid{opacity:.65;background-image:linear-gradient(#a1a8ac30 1px,transparent 1px),linear-gradient(90deg,#a1a8ac30 1px,transparent 1px);background-size:10.2vw 23.4vh;background-position:48.6vw 43.4vh}
+#mapGrid:after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,#b8c0c433 0 25px,transparent 25px 40px);background-size:100% 1px;background-repeat:repeat-y;background-position:0 33.4vh;mask-image:repeating-linear-gradient(0deg,transparent 0 calc(23.4vh - 1px),#000 calc(23.4vh - 1px) 23.4vh)}
+#reticle{width:60px;height:60px;color:#d4d8da}#reticle .reticleCorners{z-index:2}#reticle .cross{width:44px;height:44px;display:grid;place-items:center;background:#c4c7c7d9;color:#fff;font-size:30px;line-height:1;font-family:Arial,sans-serif;font-weight:300}#reticle:before{top:-19px;height:98px;background:repeating-linear-gradient(0deg,#e1e4e6 0 5px,transparent 5px 10px)}#reticle:after{left:-19px;width:98px;background:repeating-linear-gradient(90deg,#e1e4e6 0 5px,transparent 5px 10px)}
+.trackLabel{left:84px;top:-4px;width:auto;min-width:159px;font-size:26px;line-height:1;font-weight:600;font-family:'Bahnschrift','Arial Narrow',sans-serif;background:#d0d2d1;padding:1px 9px;letter-spacing:.025em}
+#locateReadout{font-family:'Bahnschrift','Arial Narrow',sans-serif;letter-spacing:.03em}#skipIntro{right:1%;bottom:16%}
+@media(max-width:1100px){.calibration{right:19vw;font-size:7px}.filters{font-size:7px;width:7vw}.network{font-size:9px}.world{width:85px}.geo{width:25%}.badge{min-width:52px;min-height:52px}.identity{left:6vw}.identity h1{font-size:18px}.identity p{font-size:10px}nav{left:6vw}footer h2{font-size:14px}#feedRows{font-size:9px;margin-left:42px}}
+@media(max-width:700px){header{left:5%;right:5%;top:4%;height:74px;min-height:0}header:before{left:-5vw;top:-4vh;height:150px}header:after{display:none}.badge{left:0;top:0;width:52px;height:52px;min-width:0;min-height:0}.identity{left:66px;top:7px}.identity h1{font-size:19px}.identity p{font-size:9px}.network,.calibration,.filters{display:none}nav{left:0;height:22px}nav button{font-size:10px}nav #config,nav #view{flex:1}nav #tools{flex:1}nav #sound{font-size:8px}footer{left:5%;right:5%;bottom:4%;height:128px}.feeds{width:52%;height:85px}.geo{width:48%;height:85px}.status{height:35px}#feedRows{font-size:8px;margin-left:33px}footer h2{font-size:12px}.world{top:24px;width:60px}.fan{left:5%;bottom:2%;font-size:5px}.mapAttribution{bottom:.5%;font-size:5px}.trackLabel{left:74px;min-width:0;font-size:19px;top:0}.panel{left:5%;top:20%}#mapGrid{background-size:25vw 23.4vh}}
+
+#reticle{visibility:hidden}.locateRings,.locateAltitude{display:none!important}
+.coinDepth{display:none!important}.coinFace{filter:brightness(1.15)}
+.introTopology{opacity:.15}.introStage{filter:none}.booting .scanlines{opacity:.015}
+
+/* IP region lookup integrated into the briefing header. */
+#ipForm{position:absolute;right:0;top:0;width:340px;margin:0;pointer-events:auto;font:9px Bahnschrift,monospace;color:#9dadb8}.ipControls{display:flex;height:24px;gap:3px}.ipControls input{width:0;min-width:0;flex:1;border:1px solid #4a555d;background:#080d10;color:#ddd;padding:4px 6px;font:11px Bahnschrift,monospace}.ipControls button{border:1px solid #44535d;background:#25323b;color:#d6dce0;font:10px Bahnschrift,monospace;padding:3px 7px;cursor:pointer}.ipControls button:disabled{opacity:.5}#ipMessage{display:block;margin-top:5px;line-height:1.2}.calibration{right:32vw}.filters{right:23vw}
+@media(max-width:1100px){.calibration,.filters{display:none}#ipForm{width:290px}.network{display:none}}
+@media(max-width:700px){header{height:112px}#ipForm{top:55px;width:100%}.ipControls{height:22px}#ipMessage{font-size:8px;margin-top:2px}}
+
+/* Briefing rails glide into their anchored positions as the emblem docks. */
+header,footer{transform:translateY(0);opacity:1;transition:transform 1.35s cubic-bezier(.16,1,.3,1),opacity .7s ease;will-change:transform,opacity}
+.booting header{transform:translateY(-22vh);opacity:0;transition:transform 1.35s cubic-bezier(.16,1,.3,1),opacity .7s ease}
+.booting footer{transform:translateY(24vh);opacity:0;transition:transform 1.45s cubic-bezier(.16,1,.3,1) .14s,opacity .75s ease .14s}
+.booting.briefingReveal header,.booting.briefingReveal footer{transform:translateY(0);opacity:1}
+@media(prefers-reduced-motion:reduce){header,footer,.booting header,.booting footer{transition:none;transform:none}}
+
+#reticle{visibility:visible}.trackLabel[hidden]{display:none!important}
+.badge{background:none!important;filter:none;box-shadow:none}.booting .badge,.booting.briefingReveal .badge{opacity:1;transition:none}
+.modelDocking{z-index:7;pointer-events:none}.introStage.headerModel{position:absolute;left:50%;top:50%;width:100%;transition:none;z-index:1;pointer-events:none}
+
+.footerBadge{position:absolute;right:8px;top:9px;width:76px;height:76px;pointer-events:none}.geo .world{display:none}.geo p{max-width:calc(100% - 76px)}.introStage.headerModel{min-width:0;max-width:none}.introStage.modelDocking{transition:left 1.6s cubic-bezier(.22,.61,.36,1),top 1.6s cubic-bezier(.22,.61,.36,1),width 1.6s cubic-bezier(.22,.61,.36,1)}
+@media(max-width:700px){.footerBadge{width:48px;height:48px;right:5px;top:14px}.geo p{max-width:calc(100% - 48px)}}
+@media(prefers-reduced-motion:reduce){.introStage.modelDocking{transition:none}}
+
+/* Idle sight: dark center, open corners and continuous fine guide lines. */
+#reticle:not(.locating) .cross{width:24px;height:24px;background:#070b10;color:#f0f2f2;font-size:26px}
+#reticle:not(.locating):before{background:#bcc8ce;opacity:.65;width:1px;left:30px}
+#reticle:not(.locating):after{background:#bcc8ce;opacity:.65;height:1px;top:30px}
+#reticle .trackLabel{min-width:0;width:max-content;white-space:nowrap}
+
+.geo .world{display:block}.geo p{max-width:none}
+#reticle.locating .cross{animation:targetSquareIn .2s cubic-bezier(.2,.7,.3,1) both}
+@keyframes targetSquareIn{from{background:#070b10;clip-path:inset(42%);opacity:.45}to{background:#c4c7c7d9;clip-path:inset(0);opacity:1}}
+@media(prefers-reduced-motion:reduce){#reticle.locating .cross{animation:none}}
+
+#locateReadout{left:calc(50% + 64px);top:calc(50% - 30px)}#locateReadout span:first-child{font-size:1.25em;line-height:1.15}.trackLabel{font-size:30px;left:84px}#ipMessage{display:none!important}.headerModel .introMedallion{animation:none;transform:rotateY(0deg)}
+@media(max-width:700px){#locateReadout{left:calc(50% + 54px);max-width:calc(50% - 60px)}.trackLabel{font-size:23px;left:74px}}
+
+/* Match the faction title and colored operator strip from the briefing reference. */
+.introReadout{top:73%;width:max-content;max-width:90vw;text-align:center;transition:none;font-family:Bahnschrift,'Arial Narrow',sans-serif}.introReadout #introStatus{margin:0 0 7px;color:#e6e8e9;font-size:clamp(24px,2.7vw,42px);font-weight:600;letter-spacing:.065em;line-height:1.05}.introName{background:#244a74;color:#e7edf4;padding:4px 16px;font-size:clamp(15px,1.9vw,28px);letter-spacing:.045em;font-weight:500;line-height:1.05}.introReadout>*{clip-path:inset(0 100% 0 0)}.introReadout.textIn>*{animation:briefingTextIn .65s steps(24,end) both}.introReadout.textIn .introName{animation-delay:.4s}.introReadout.textOut>*{animation:briefingTextOut .45s steps(24,end) both}.introReadout.textOut .introName{animation-delay:0s}.docking .introReadout{opacity:1}
+@keyframes briefingTextIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}@keyframes briefingTextOut{from{clip-path:inset(0)}to{clip-path:inset(0 100% 0 0)}}
+.introStage:not(.no3d) .introMedallion{display:none}#medallion3d{opacity:0}.has3d #medallion3d{opacity:1;transition:opacity .12s ease}.introStage.headerModel{transition:none!important;width:100%;height:100%;aspect-ratio:auto}.introStage.headerModel #medallion3d{transition:none}
+#reticle .cross{transition:width .2s ease,height .2s ease,background .2s ease}#reticle .reticleCorners,#reticle:before,#reticle:after{transition:opacity .2s ease,background .2s ease}#reticle:not(.locating) .cross{animation:idleSightIn .2s ease both}@keyframes idleSightIn{from{opacity:.45;clip-path:inset(40%)}to{opacity:1;clip-path:inset(0)}}
+@media(max-width:700px){.introReadout{top:66%}.introReadout #introStatus{font-size:26px}.introName{font-size:16px;padding:4px 8px}}
+@media(prefers-reduced-motion:reduce){.introReadout.textIn>*,.introReadout.textOut>*{animation:none;clip-path:inset(0)}.introReadout.textOut{opacity:0}}
+
+/* IP tools share the original gray instrument rail with a compact audio segment. */
+.calibration{right:20.3vw}.filters{right:8.8vw}nav #config,nav #view{flex:0 1 14%}nav #tools{flex:0 1 19%}nav #sound{flex:0 0 86px}nav #fullscreen{flex:0 0 30px}nav .code{padding:0 9px}
+nav #ipForm{position:static;flex:1;min-width:260px;width:auto;display:flex;align-items:stretch;border-left:2px solid #164a67;margin:0;background:#55595c75}nav .ipControls{height:100%;width:100%;gap:0}nav .ipControls input{border:0;background:transparent;color:#d7dfe3;font-size:10px;padding:2px 7px}nav .ipControls input::placeholder{color:#a0adb5}nav .ipControls input:focus{outline:none;box-shadow:inset 0 0 0 1px #51809a}nav .ipControls button{flex:0 0 auto;background:transparent;color:#a7abaf;border:0;border-left:1px solid #164a67;padding:2px 7px;font-size:10px}nav .ipControls button:hover{background:#395469;color:#e8eef1}
+#reticle.searching .cross{animation:targetSquareIn .2s cubic-bezier(.2,.7,.3,1) both,targetSquareBlink 1.1s steps(1,end) .2s infinite}@keyframes targetSquareBlink{0%,55%,100%{background:#c4c7c7d9}56%,99%{background:transparent}}
+@media(max-width:1100px){nav #config,nav #view{flex-basis:12%}nav #tools{flex-basis:15%}nav #ipForm{min-width:220px}nav #sound{flex-basis:70px}}
+@media(max-width:700px){header{height:108px}nav{height:50px;flex-wrap:wrap}nav #config,nav #view,nav #tools{order:1;flex:1 0 calc((100% - 30px)/3);height:24px}nav #fullscreen{order:2;height:24px}nav #ipForm{order:3;flex:1 1 calc(100% - 74px);min-width:0;height:26px}nav #sound{order:4;flex:0 0 74px;height:26px}nav .ipControls input,nav .ipControls button{font-size:8px}nav .code{display:none}}
+@media(prefers-reduced-motion:reduce){#reticle.searching .cross{animation:none}}
+
+.emblemBackdrop{position:absolute;inset:0;background:#020304;opacity:0;pointer-events:none;z-index:2;transition:opacity 1.3s ease}.emblemBackdrop:after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(43deg,transparent 0 6px,#8b9ca90a 6px 7px);mask-image:linear-gradient(90deg,#000,transparent 75%)}.emblemView .emblemBackdrop{opacity:1}.introStage.liveViewModel{position:absolute;z-index:3;aspect-ratio:1;pointer-events:none;max-width:none;min-width:0}.emblemView .zoom{visibility:hidden}.liveViewModel.no3d .introMedallion{animation:uniformTurn 4s linear infinite}.liveViewModel.has3d #medallion3d{opacity:1}
+@media(prefers-reduced-motion:reduce){.emblemBackdrop{transition:none}}
+
+/* The live emblem owns one foreground layer throughout loading, docking and VIEW. */
+.introStage.logoForeground,.introStage.logoForeground.headerModel,.introStage.logoForeground.liveViewModel,.introStage.logoForeground.modelDocking{z-index:30;pointer-events:none}
+
+/* Keep metadata above the navigation rail. */
+header .filters{top:auto;bottom:27px;line-height:1.05}
+
