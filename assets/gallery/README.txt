@@ -1,0 +1,1 @@
+Add PNG, JPG, JPEG, WEBP, GIF or AVIF images to this folder. Run Update-Images.cmd in the repository root after adding or removing images, then reload. Upload both the gallery files and gallery-manifest.js to GitHub Pages. The image window picks a random preset on VIEW; NEXT cycles through the images.

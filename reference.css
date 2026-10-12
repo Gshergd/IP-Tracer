@@ -81,3 +81,5 @@ nav #ipForm{position:static;flex:1;min-width:260px;width:auto;display:flex;align
 /* Keep metadata above the navigation rail. */
 header .filters{top:auto;bottom:27px;line-height:1.05}
 
+
+#operatorForm{margin:0;display:flex;align-items:center;justify-content:center;gap:10px;min-width:min(440px,85vw)}#operatorName{background:none;border:0;border-bottom:1px solid #b1c4d555;color:#e7edf4;font:inherit;letter-spacing:inherit;text-transform:uppercase;min-width:0;width:15ch;outline:none;padding:0 2px}#operatorName::placeholder{color:#d1dbe6}#operatorName:focus{border-bottom-color:#e7edf4}#operatorForm button{background:transparent;border:0;color:#d6e2ed;font:inherit;padding:0 3px;cursor:pointer}.rankPrefix{color:#c6d2e0}

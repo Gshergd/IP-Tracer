@@ -1,0 +1,4 @@
+(()=>{const form=document.getElementById('operatorForm'),input=document.getElementById('operatorName'),subtitle=document.querySelector('.identity p');let name='PVT. ANONYMOUS';function normalize(value){return String(value).trim().replace(/^PVT\.?\s*/i,'').replace(/\s+/g,' ').toUpperCase().slice(0,32)}
+try{input.value=normalize(localStorage.getItem('tf141-operator')||'')}catch{}
+window.operatorProfile={getName:()=>name};input.addEventListener('input',()=>{const cursor=input.selectionStart;input.value=input.value.toUpperCase();if(cursor!==null)input.setSelectionRange(cursor,cursor)});form.addEventListener('submit',e=>{e.preventDefault();const entered=normalize(input.value);if(!entered){input.focus();return}name='PVT. '+entered;subtitle.textContent=name;try{localStorage.setItem('tf141-operator',entered)}catch{}form.textContent=name;window.startBriefing?.()});setTimeout(()=>{input.focus();input.select()},450);
+})();
